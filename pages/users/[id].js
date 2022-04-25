@@ -1,6 +1,12 @@
 import { useRouter } from 'next/router'
 
-export default function () {
+import styles from '../../styles/user.module.scss'
+
+export default function User() {
 	const { query } = useRouter()
-	return <div>Пользователь с id: {query.id}</div>
+	return (
+		<div className={styles.user}>
+			<h1>Пользователь с id: {query.id}</h1>
+		</div>
+	)
 }

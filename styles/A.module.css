@@ -3,4 +3,9 @@
 	color: #000;
 	font-size: 18px;
 	margin: 10px;
+	transition: color 0.2s ease 0s;
+}
+
+.link:hover {
+	color: green;
 }

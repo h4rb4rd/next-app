@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 import A from '../components/A'
 
 const Index = () => {

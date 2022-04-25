@@ -1,11 +1,14 @@
+import MainContainer from '../../components/MainContainer'
 import styles from '../../styles/user.module.scss'
 
 export default function User({ user }) {
 	return (
-		<div className={styles.user}>
-			<h1>Пользователь с id: {user.id}</h1>
-			<p>Имя пользователя - {user.name}</p>
-		</div>
+		<MainContainer keywords='user page' title='Пользователь'>
+			<div className={styles.user}>
+				<h1>Пользователь с id: {user.id}</h1>
+				<p>Имя пользователя - {user.name}</p>
+			</div>
+		</MainContainer>
 	)
 }
 

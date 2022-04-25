@@ -1,22 +1,25 @@
 import A from '../components/A'
-
-const initialUsers = [
-	{ id: 1, name: 'Пользователь 1' },
-	{ id: 2, name: 'Пользователь 2' },
-]
+import MainContainer from '../components/MainContainer'
 
 const Users = ({ users }) => {
 	return (
-		<div>
+		<MainContainer keywords='users page' title='Список Пользователей'>
 			<h1>Список пользователей</h1>
-			<ul>
+			<ul className='list'>
 				{users.map(({ name, id }) => (
 					<li key={id}>
 						<A href={`/users/${id}`} text={name} />
 					</li>
 				))}
 			</ul>
-		</div>
+			<style jsx>{`
+				.list {
+					list-style: none;
+					background: orange;
+					padding: 15px;
+				}
+			`}</style>
+		</MainContainer>
 	)
 }
 
